@@ -27,9 +27,17 @@ class CSVOperator
 
     /**
      * changes column names to their index in row in current file
-     * param array patternArray
-     * param array
-     * return array
+     * @param array patternArray for test task it will be $paternsArray = array(
+     *      'phone' =>array(
+     *       'pattern' => '#[^0-9]#',
+     *       'replacement' => ''
+     *   ),
+     *   'birthday' => array(
+     *       'pattern' => '#([1-2][0-9]{3})-([0-1][0-9])-([0-3][0-9])#',
+     *       'replacement' => '$3-$2-$1'
+     *   ));
+     * @param array $columnsArray
+     * @return array 
      */
     public function preparePattern($patternArray,$columnsArray)
     {
